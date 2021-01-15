@@ -75,6 +75,8 @@ https://www.youtube.com/watch?v=bNOlimnWZJE&list=PLc6fhBPeC6SBbZFcrHLlPXyR2svfxf
 ##### 線路圖
 ![線路圖](/suppor_pics/l298n.jpg)
 
+樹梅派的腳位可以依個人喜好改成別的腳位，但注意一定要接到地極不然無法控制。
+
 可以直接照著線路圖接，不過要記得線接在樹梅派的哪個腳位，因為程式要用到。
 
 ### How to implement
@@ -89,11 +91,45 @@ https://www.youtube.com/watch?v=bNOlimnWZJE&list=PLc6fhBPeC6SBbZFcrHLlPXyR2svfxf
 
 ### Programming
 
-### Control wheels
+在程式設計的部分我直接在學姊的程式碼上做修改，連結附在後面。
 
-### PWM
+簡單來說，我新增了一個html用來提供呼叫與返回功能，而設定航線的部分則是直接連結學姊寫好的function與網頁。
 
-### Final Product
+每當使用者呼叫forward()、back()這些前進、後退、轉彎的功能時，都會記錄到一個list裡。
+
+而當使用者紀錄好航線後，呼叫時就以queue的方式存取list，返回時就以stack存取list，以此達到沿航線前進與原路返回的效果。
+
+#### Control wheels
+
+4個馬達分成兩組控制，一組一側，所以要注意同一側的馬達要接在L298n的同一側上。
+
+透過以下程式控制:
+
+```
+    gpio.output(N1, False)
+    gpio.output(N2, True)
+    gpio.output(N3, True)
+    gpio.output(N4, False)
+    time.sleep(0.5)
+```
+意思是讓四個馬達前進0.5秒。
+
+要注意同一側的兩個腳位是控制正轉與反轉，所以不能4個都設成true，不然不會動。
+
+而且也要注意，不同的接法會造成腳位控制的結果不一樣，所以最後一定要依實際情況來調整程式的寫法。
+
+當要轉彎時，就單讓某一側的馬達前進便可。
+
+#### PWM
+
+```
+pwm1 = gpio.PWM(N2, 100)
+pwm2 = gpio.PWM(N3, 100)
+```
+
+透過pwm來達到控制馬達轉動速度的效果。
+
+#### Final Product
 
 成品示意圖
 
