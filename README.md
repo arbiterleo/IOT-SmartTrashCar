@@ -9,7 +9,7 @@
 
 ### Things you will need
 
-+ 一個Rasberry Pi 3
++ 一個RasPberry Pi 3
 + 行動電源，用於給樹梅派供電
 + 一個L298N馬達驅動模組
 + 一個電池盒
@@ -22,7 +22,9 @@
 ### Before Getting Start
 
 在開始之前，你必須先架設好樹梅派的環境。
-請根據本專案中的resberryPi_instruction文件來架設環境。
+請根據本專案中的rasberryPi_instruction文件來架設環境。
+
+當你按照文件中的步驟一步一步進行，最後你應該會擁有一個已安裝好conda與python的作業系統。
 
 接著打開terminal，輸入下列指令來透過conda安裝flask。
 
@@ -32,17 +34,54 @@ conda install flask
 
 flask是一個使用Python編寫的輕量級Web應用框架，透過它我們可以在短短幾行程式碼內便建出一個可用的網站。
 
+接著，創建用來存放專案的資料夾。
+
+```
+mkdir carapp
+
+cd carapp
+
+mkdir statics
+mkdir templates
+```
+
+這些資料夾用於存放控制車子行動的網頁。
+
+當我們需要呼叫車子時，我們會透過手機進入我們寫好的網頁，然後網頁會根據使用者的行動再呼叫rasPberryPi上已寫好的python程式來控制車子。
+
 ### Build up your Car
 
-根據此影片組裝你的車體。
+在進行其他步驟之前，我們必須先組裝好車子。
+
+照著此影片組裝你的車體。
 https://www.youtube.com/watch?v=uW8YVcBjPGU
 
+我使用的車體是在下列連結購買的，如果你使用的是其他型號的車體，可能必須自行尋找組裝的方法。
+
+[連結](https://www.taiwaniot.com.tw/product/%e5%9b%9b%e9%a9%85-4wd-%e6%99%ba%e6%85%a7%e5%b0%8f%e8%bb%8a-%e8%87%aa%e8%b5%b0%e8%bb%8a-%e6%a9%9f%e5%99%a8%e4%ba%ba-%e5%ba%95%e7%9b%a4%e9%96%8b%e7%99%bc%e5%a5%97%e4%bb%b6%e7%b5%84/)
+
 ### L298N motor driver
+
+我們使用L298N motor driver來驅動車體附贈的四台直流馬達。
+
+這部影片中有較為詳細的講解。
+https://www.youtube.com/watch?v=bNOlimnWZJE&list=PLc6fhBPeC6SBbZFcrHLlPXyR2svfxf1RZ&index=19&t=507s
+
+#### 開始之前該注意的地方
++ L298N motor driver一開始被包裝在一個防靜電的袋內，確保你在接觸它之前已消過靜電，並且在用完時應將它放回袋內
++ 直流馬達與L298N motor driver的正負極要分清楚，千萬不要接反，不然就會跟我一樣報銷設備還浪費一堆時間debug
++ 線要接穩不然會一直掉，建議使用杜邦線而不要用車體附贈的紅黑線，並且L298N motor driver上面的螺絲是可以調整鬆緊的，善用這些點來提高工作效率
+
+### Programming
 
 ### Control wheels
 
 ### PWM
 
 ### Final Product
+
+### Functions can be improved or have not been made
+
+### Reference
 
 ### Demo video
