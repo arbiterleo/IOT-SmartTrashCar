@@ -17,20 +17,23 @@
 
 <body>
     <div id="title">The Smart Trash Car</div>
-    
+
     <div class="main">
         <p class="form-text text-muted">
             使用前請先設定航線
         </p>
 
         <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">呼叫垃圾車</h5>
-                </div>
-                <br>
-                <p class="mb-1">按下後車子會沿航線前進</p>
-            </a>
+            <form action="/call" method="post">
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">呼叫垃圾車</h5>
+                    </div>
+                    <br>
+                    <p class="mb-1">按下後車子會沿航線前進</p>
+                </a>
+            </form>
+            <form action="/return" method="post"></form>
             <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">返回垃圾桶</h5>
@@ -38,6 +41,7 @@
                 <br>
                 <p class="mb-1">按下後車子會原路返回垃圾桶</p>
             </a>
+            </form>
             <a href="controll.html" class="list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-2">設定航線</h5>
@@ -45,7 +49,7 @@
                 <br>
                 <p class="mb-1">按下後會進入控制頁面，可以操控車子前進</p>
             </a>
-        </div>   
+        </div>
     </div>
 
 
