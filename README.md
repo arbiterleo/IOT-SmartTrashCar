@@ -73,7 +73,7 @@ https://www.youtube.com/watch?v=bNOlimnWZJE&list=PLc6fhBPeC6SBbZFcrHLlPXyR2svfxf
 + 線要接穩不然會一直掉，建議使用杜邦線而不要用車體附贈的紅黑線，並且L298N motor driver上面的螺絲是可以調整鬆緊的，善用這些點來提高工作效率
 
 ##### 線路圖
-![線路圖](/support pics/l298n)
+![線路圖](/supportpics/l298n)
 
 ### Programming
 
