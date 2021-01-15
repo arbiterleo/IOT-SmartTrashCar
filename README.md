@@ -67,10 +67,13 @@ https://www.youtube.com/watch?v=uW8YVcBjPGU
 這部影片中有較為詳細的講解。
 https://www.youtube.com/watch?v=bNOlimnWZJE&list=PLc6fhBPeC6SBbZFcrHLlPXyR2svfxf1RZ&index=19&t=507s
 
-#### 開始之前該注意的地方
+##### 開始之前該注意的地方
 + L298N motor driver一開始被包裝在一個防靜電的袋內，確保你在接觸它之前已消過靜電，並且在用完時應將它放回袋內
 + 直流馬達與L298N motor driver的正負極要分清楚，千萬不要接反，不然就會跟我一樣報銷設備還浪費一堆時間debug
 + 線要接穩不然會一直掉，建議使用杜邦線而不要用車體附贈的紅黑線，並且L298N motor driver上面的螺絲是可以調整鬆緊的，善用這些點來提高工作效率
+
+##### 線路圖
+![線路圖](/support pics/l298n)
 
 ### Programming
 
