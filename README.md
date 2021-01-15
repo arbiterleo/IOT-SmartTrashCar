@@ -73,16 +73,18 @@ https://www.youtube.com/watch?v=bNOlimnWZJE&list=PLc6fhBPeC6SBbZFcrHLlPXyR2svfxf
 + 線要接穩不然會一直掉，建議使用杜邦線而不要用車體附贈的紅黑線，並且L298N motor driver上面的螺絲是可以調整鬆緊的，善用這些點來提高工作效率
 
 ##### 線路圖
-![線路圖](/suppor_pics/l298n.jpg)
+![線路圖](/suppotpics/l298n.jpg)
 
 可以直接照著線路圖接，不過要記得線接在樹梅派的哪個腳位，因為程式要用到。
 
 ### How to implement
 
 使用者一開始應該要進入index.html，然後得先設定航線。
+
 點擊設定航線後會進入controll.html，讓使用者能夠自己操控車子前進，並且車子會自動記錄航線。
 
 記錄好後，使用者返回index.html並且將車子放置垃圾桶旁。
+
 之後使用者只需在index.html按呼叫車子的按鈕車子就會沿著航線從垃圾桶旁來到使用者設定好的位置，然後當使用者放好垃圾按下返回按鈕，車子就會帶著垃圾原路返回垃圾桶。
 
 ### Programming
@@ -93,14 +95,16 @@ https://www.youtube.com/watch?v=bNOlimnWZJE&list=PLc6fhBPeC6SBbZFcrHLlPXyR2svfxf
 
 ### Final Product
 
-![成品圖](/suppor_pics/final.jpg)
+成品示意圖
+
+![成品圖](/suppotpics/final.jpg)
 
 ### Functions can be improved or have not been made
 
 1. 無法讓車子自動偵測到使用者位置
 2. 沒有自動避障功能
 3. 網頁只能透過本機存取
-4. 未來應該加裝垃圾欄來丟垃圾
+4. 未來應該加裝垃圾籃來丟垃圾
 
 ### Reference
 
